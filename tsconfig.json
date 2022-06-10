@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "outDir": "dist",
+    "rootDir": ".",
+    "sourceMap": true,
+    "strict": false,
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "pretty": true,
+    "declaration": true,
+    "allowJs": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@controller/*": ["controller/*"],
+      "@entity/*": ["entity/*"],
+      "@exceptions/*": ["exceptions/*"],
+      "@interfaces/*": ["interfaces/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@services/*": ["services/*"],
+      "@untilities/*": ["utilities/*"]
+    }
+  },
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    ".env",
+    "./src/**/*.ts",
+    "./src/**/*.json",
+    "./lib/**/*.ts",
+    "./func-login/*.ts",
+    "./func-add-user/*.ts",
+    "./func-get-all-users/*.ts",
+    "./func-update-user/*.ts",
+    "./func-delete-user/*.ts",
+  ]
+}
