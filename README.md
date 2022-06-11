@@ -16,3 +16,7 @@ npm start
 ## Important
 
 Please remove the extra element, DataSoruce object in src/utilities/database.ts file if your database config does not have a mysql socket
+
+## Config
+
+Please refer to src/config/index.ts for the env variables
