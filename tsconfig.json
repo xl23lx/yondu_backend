@@ -44,5 +44,6 @@
     "./func-get-all-users/*.ts",
     "./func-update-user/*.ts",
     "./func-delete-user/*.ts",
+    "./func-delete-multiple-user/*.ts",
   ]
 }
