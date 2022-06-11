@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { LoginPayload } from '../interface/login.interface';
 import { EncryptionHelper } from '../helper/encryption.helper';
 import { AddUserPayload } from '../interface/addUser.interface';
+import { DeleteMultipleUser } from '../interface/deleteMultipleUser.interface';
 
 const db = AppDataSource
 const encrypt = new EncryptionHelper
@@ -57,4 +58,11 @@ export const deleteUser=async (userId:string)=>{
     const userRepo = await db.getRepository(User) as Repository<User>;
     await userRepo.delete({id:userId});
     return {status:200,body:{message:"User has been deleted."}};
+}
+export const deleteMultipleUser=async(req:DeleteMultipleUser)=>{
+    const userRepo= await db.getRepository(User) as Repository<User>;
+    await req.userId.map(id=>{
+        return userRepo.delete({id})
+    })
+    return {status:200,body:{message:"User/s has been deleted."}};
 }
