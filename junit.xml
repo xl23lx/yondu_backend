@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="1" failures="1" errors="0" time="3.259">
+  <testsuite name="testing transaction summary controller methods" errors="0" failures="1" skipped="0" timestamp="2022-06-11T14:07:01" time="3.146" tests="1">
+    <testcase classname="testing transaction summary controller methods should return all users" name="testing transaction summary controller methods should return all users" time="0.001">
+      <failure>EntityMetadataNotFoundError: No metadata for &quot;User&quot; was found.
+    at DataSource.getMetadata (/Users/benedictnones/Documents/Projects/yondu_backend/src/data-source/DataSource.ts:422:30)
+    at Repository.get metadata [as metadata] (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:52:40)
+    at Repository.find (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:476:39)
+    at find (/Users/benedictnones/Documents/Projects/yondu_backend/src/controller/userController.ts:27:32)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at Object.&lt;anonymous&gt; (/Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:5:24)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
