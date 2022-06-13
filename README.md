@@ -1,4 +1,4 @@
-#Yondu_backend
+# Yondu_backend
 
 ## Installation
 Use the package manager [npm]([https://pip.pypa.io/en/stable/](https://docs.npmjs.com/cli/v8/commands/npm-link)) to install npm package manager.
@@ -6,6 +6,7 @@ Use the package manager [npm]([https://pip.pypa.io/en/stable/](https://docs.npmj
 ```bash
 npm install
 ```
+## Install globaly to run azure function local to you device
 ```bash
 npm i -g azure-functions-core-tools 
 ```
