@@ -5,9 +5,11 @@ import { LoginPayload } from '../interface/login.interface';
 import { EncryptionHelper } from '../helper/encryption.helper';
 import { AddUserPayload } from '../interface/addUser.interface';
 import { DeleteMultipleUser } from '../interface/deleteMultipleUser.interface';
+import {TokenManager} from '../helper/jwt.helper';
 
-const db = AppDataSource
-const encrypt = new EncryptionHelper
+const db = AppDataSource;
+const encrypt = new EncryptionHelper;
+const tokenManager=new TokenManager();
 
 export const login = async (req:LoginPayload)=>{
     const userRepo = await db.getRepository(User) as Repository<User>;
@@ -16,11 +18,11 @@ export const login = async (req:LoginPayload)=>{
         return {status:401,body:{message:"Invalid Credentials."}};
     }
     const match=await encrypt.validatePassword(req.password,users.password);
-    console.log(match);
     if(!match){
         return {status:401,body:{message:"Invalid Credentials."}};
     }
-    return {status:200,body:users};
+    delete users.password;
+    return {status:200,body:users,headers:{"Login-Token":"Bearer "+tokenManager.generateToken(JSON.stringify(users))}};
 }
 export const getAllUsers = async ()=>{
     const userRepo = await db.getRepository(User) as Repository<User>;

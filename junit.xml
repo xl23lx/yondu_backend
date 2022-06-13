@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="1" errors="0" time="3.259">
-  <testsuite name="testing transaction summary controller methods" errors="0" failures="1" skipped="0" timestamp="2022-06-11T14:07:01" time="3.146" tests="1">
+<testsuites name="jest tests" tests="4" failures="4" errors="0" time="152.968">
+  <testsuite name="testing transaction summary controller methods" errors="0" failures="4" skipped="0" timestamp="2022-06-13T02:34:42" time="152.731" tests="4">
     <testcase classname="testing transaction summary controller methods should return all users" name="testing transaction summary controller methods should return all users" time="0.001">
       <failure>EntityMetadataNotFoundError: No metadata for &quot;User&quot; was found.
     at DataSource.getMetadata (/Users/benedictnones/Documents/Projects/yondu_backend/src/data-source/DataSource.ts:422:30)
     at Repository.get metadata [as metadata] (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:52:40)
     at Repository.find (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:476:39)
-    at find (/Users/benedictnones/Documents/Projects/yondu_backend/src/controller/userController.ts:27:32)
+    at find (/Users/benedictnones/Documents/Projects/yondu_backend/src/controller/userController.ts:29:32)
     at processTicksAndRejections (node:internal/process/task_queues:96:5)
-    at Object.&lt;anonymous&gt; (/Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:5:24)</failure>
+    at Object.&lt;anonymous&gt; (/Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:10:24)</failure>
+    </testcase>
+    <testcase classname="testing transaction summary controller methods should delete a user" name="testing transaction summary controller methods should delete a user" time="0">
+      <failure>EntityMetadataNotFoundError: No metadata for &quot;User&quot; was found.
+    at DataSource.getMetadata (/Users/benedictnones/Documents/Projects/yondu_backend/src/data-source/DataSource.ts:422:30)
+    at Repository.get metadata [as metadata] (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:52:40)
+    at Repository.find (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:476:39)
+    at Object.&lt;anonymous&gt; (/Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:15:35)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)</failure>
+    </testcase>
+    <testcase classname="testing transaction summary controller methods should add a user" name="testing transaction summary controller methods should add a user" time="150.006">
+      <failure>Error: thrown: &quot;Exceeded timeout of 150000 ms for a test.
+Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test.&quot;
+    at /Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:19:5
+    at _dispatchDescribe (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-circus/build/index.js:105:26)
+    at describe (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-circus/build/index.js:60:5)
+    at Object.&lt;anonymous&gt; (/Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:8:1)
+    at Runtime._execModule (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-runtime/build/index.js:1714:24)
+    at Runtime._loadModule (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-runtime/build/index.js:1223:12)
+    at Runtime.requireModule (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-runtime/build/index.js:1047:12)
+    at jestAdapter (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:89:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at runTestInternal (/Users/benedictnones/Documents/Projects/yondu_backend/node_modules/jest-runner/build/runTest.js:411:16)</failure>
+    </testcase>
+    <testcase classname="testing transaction summary controller methods should able to login" name="testing transaction summary controller methods should able to login" time="0.001">
+      <failure>EntityMetadataNotFoundError: No metadata for &quot;User&quot; was found.
+    at DataSource.getMetadata (/Users/benedictnones/Documents/Projects/yondu_backend/src/data-source/DataSource.ts:422:30)
+    at Repository.get metadata [as metadata] (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:52:40)
+    at Repository.findOneBy (/Users/benedictnones/Documents/Projects/yondu_backend/src/repository/Repository.ts:539:44)
+    at findOneBy (/Users/benedictnones/Documents/Projects/yondu_backend/src/controller/userController.ts:16:32)
+    at Object.&lt;anonymous&gt; (/Users/benedictnones/Documents/Projects/yondu_backend/test/userController.test.ts:33:24)</failure>
     </testcase>
   </testsuite>
 </testsuites>
